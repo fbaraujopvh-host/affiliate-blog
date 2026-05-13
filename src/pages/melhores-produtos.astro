@@ -1,0 +1,94 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  {
+    name: 'JBL Tune 520BT Bluetooth 5.3',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80',
+    price: 'R$ 249,00',
+    oldPrice: 'R$ 349,00',
+    rating: 4.5,
+    reviewCount: 8420,
+    affiliateUrl: '#',
+    badge: '🥇 #1 Mais Vendido',
+    pros: ['57h de bateria', 'Pure Bass Sound', 'Dobrável e leve'],
+  },
+  {
+    name: 'Air Fryer Philips Walita 4,1L',
+    image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?w=300&q=80',
+    price: 'R$ 499,00',
+    oldPrice: 'R$ 699,00',
+    rating: 4,
+    reviewCount: 12340,
+    affiliateUrl: '#',
+    badge: '🔥 Oferta do Dia',
+    pros: ['4,1L de capacidade', 'Timer digital', 'Bandeja antiaderente'],
+  },
+  {
+    name: 'Kindle 11ª Geração 16GB',
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80',
+    price: 'R$ 399,90',
+    rating: 5,
+    reviewCount: 45600,
+    affiliateUrl: '#',
+    pros: ['Luz integrada', 'Meses de bateria', 'Resistente à água'],
+  },
+  {
+    name: 'Aspirador Robô Xiaomi Robot Vacuum',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80',
+    price: 'R$ 799,00',
+    oldPrice: 'R$ 1.099,00',
+    rating: 4,
+    reviewCount: 5680,
+    affiliateUrl: '#',
+    badge: '27% OFF',
+    pros: ['Mapeamento LDS', '2500 Pa de sucção', 'App e voz'],
+  },
+  {
+    name: 'Smartwatch Samsung Galaxy Watch 6',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80',
+    price: 'R$ 1.299,00',
+    oldPrice: 'R$ 1.699,00',
+    rating: 4.5,
+    reviewCount: 9870,
+    affiliateUrl: '#',
+    pros: ['Monitor de saúde avançado', 'GPS integrado', 'WearOS 4'],
+  },
+  {
+    name: 'Cafeteira Nespresso Essenza Mini',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&q=80',
+    price: 'R$ 529,00',
+    oldPrice: 'R$ 699,00',
+    rating: 4.5,
+    reviewCount: 18320,
+    affiliateUrl: '#',
+    badge: '⭐ Favorita dos Clientes',
+    pros: ['Compacta e elegante', 'Pronta em 25s', 'Pressão 19 bar'],
+  },
+];
+---
+
+<PageLayout
+  title="Melhores Produtos — MelhoresProdutos"
+  description="Os produtos mais bem avaliados da Amazon selecionados pela nossa equipe. Atualizados diariamente."
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-3">
+        ⭐ Melhores Produtos da Amazon
+      </h1>
+      <p class="text-gray-600 max-w-xl mx-auto">
+        Selecionados com base em avaliações dos compradores, custo-benefício e qualidade comprovada. Atualizado em {new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })}.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {products.map((product) => <ProductCard {...product} />)}
+    </div>
+
+    <p class="text-center text-xs text-gray-400 mt-10">
+      Participante do Programa de Associados da Amazon. Ao comprar pelos nossos links, recebemos uma comissão sem custo adicional para você.
+    </p>
+  </div>
+</PageLayout>

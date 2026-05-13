@@ -1,0 +1,159 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const posts = [
+  {
+    title: '10 Melhores Fones de Ouvido Bluetooth de 2024',
+    slug: 'melhores-fones-bluetooth-2024',
+    excerpt: 'Testamos os principais modelos do mercado para você fazer a melhor escolha. Confira nossa análise detalhada com prós e contras de cada um.',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80',
+    category: 'Eletrônicos',
+    publishedAt: new Date('2024-11-15'),
+    readingTime: 8,
+  },
+  {
+    title: 'As Melhores Fritadeiras Air Fryer para sua Cozinha',
+    slug: 'melhores-air-fryer',
+    excerpt: 'Descubra qual fritadeira sem óleo vale a pena comprar em 2024. Comparamos capacidade, potência, funções extras e custo-benefício.',
+    image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?w=600&q=80',
+    category: 'Casa & Cozinha',
+    publishedAt: new Date('2024-11-10'),
+    readingTime: 6,
+  },
+  {
+    title: 'Guia Completo: Como Escolher um Colchão na Amazon',
+    slug: 'como-escolher-colchao-amazon',
+    excerpt: 'Tudo que você precisa saber antes de comprar um colchão online: tipos, espessura, tecnologias e quais marcas têm melhor custo-benefício.',
+    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',
+    category: 'Casa & Cozinha',
+    publishedAt: new Date('2024-11-05'),
+    readingTime: 10,
+  },
+];
+
+const featuredProducts = [
+  {
+    name: 'Fone JBL Tune 520BT Bluetooth 5.3',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80',
+    price: 'R$ 249,00',
+    oldPrice: 'R$ 349,00',
+    rating: 4.5,
+    reviewCount: 8420,
+    affiliateUrl: '#',
+    badge: '28% OFF',
+    pros: ['57h de bateria', 'Pure Bass Sound', 'Dobrável e leve'],
+  },
+  {
+    name: 'Fritadeira Air Fryer Philips Walita 4,1L',
+    image: 'https://images.unsplash.com/photo-1585515320310-259814833e62?w=300&q=80',
+    price: 'R$ 499,00',
+    oldPrice: 'R$ 699,00',
+    rating: 4,
+    reviewCount: 12340,
+    affiliateUrl: '#',
+    badge: 'Mais Vendido',
+    pros: ['4,1 litros de capacidade', 'Timer digital', 'Bandeja antiaderente'],
+  },
+  {
+    name: 'Kindle 11ª Geração 16GB com Luz',
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80',
+    price: 'R$ 399,90',
+    rating: 5,
+    reviewCount: 45600,
+    affiliateUrl: '#',
+    pros: ['Luz integrada ajustável', 'Meses de bateria', 'Resistente à água IPX8'],
+  },
+];
+
+const categories = [
+  { name: 'Eletrônicos', icon: '📱', href: '/categoria/eletronicos', count: 42 },
+  { name: 'Casa & Cozinha', icon: '🏠', href: '/categoria/casa', count: 38 },
+  { name: 'Esportes', icon: '🏋️', href: '/categoria/esportes', count: 25 },
+  { name: 'Informática', icon: '💻', href: '/categoria/informatica', count: 31 },
+  { name: 'Beleza', icon: '✨', href: '/categoria/beleza', count: 19 },
+  { name: 'Livros', icon: '📚', href: '/categoria/livros', count: 15 },
+];
+---
+
+<PageLayout
+  title="MelhoresProdutos — As melhores análises da Amazon"
+  description="Análises honestas e recomendações dos melhores produtos da Amazon para facilitar sua decisão de compra."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-amber-50 to-white border-b border-amber-100 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <span class="badge bg-amber-100 text-amber-700 mb-4 inline-block">Análises independentes e honestas</span>
+      <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
+        Encontre o Produto Perfeito<br />
+        <span class="text-amber-500">sem perder tempo pesquisando</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Testamos e comparamos os melhores produtos da Amazon para que você compre com confiança.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/melhores-produtos" class="btn-primary text-base px-6 py-3">Ver Melhores Produtos</a>
+        <a href="/blog" class="btn-secondary text-base px-6 py-3">Ler Análises</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Categorias</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+      {categories.map(({ name, icon, href, count }) => (
+        <a href={href} class="card p-4 text-center hover:border-amber-200 group">
+          <div class="text-3xl mb-2">{icon}</div>
+          <p class="text-sm font-semibold text-gray-800 group-hover:text-amber-600 transition-colors">{name}</p>
+          <p class="text-xs text-gray-400 mt-0.5">{count} artigos</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="bg-white border-y border-gray-100 py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">Produtos em Destaque</h2>
+        <a href="/melhores-produtos" class="text-sm text-amber-600 font-semibold hover:text-amber-800">Ver todos →</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {featuredProducts.map((product) => <ProductCard {...product} />)}
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold text-gray-900">Artigos Recentes</h2>
+      <a href="/blog" class="text-sm text-amber-600 font-semibold hover:text-amber-800">Ver todos →</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {posts.map((post) => <PostCard {...post} />)}
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-gray-900 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {[
+          { icon: '🔍', label: 'Análises detalhadas', desc: 'Testamos cada produto' },
+          { icon: '⭐', label: '+200 produtos', desc: 'Avaliados e comparados' },
+          { icon: '💰', label: 'Sem custo extra', desc: 'Comissão não afeta o preço' },
+          { icon: '🔄', label: 'Atualizado sempre', desc: 'Preços e análises frescos' },
+        ].map(({ icon, label, desc }) => (
+          <div>
+            <div class="text-3xl mb-2">{icon}</div>
+            <p class="font-semibold">{label}</p>
+            <p class="text-sm text-gray-400 mt-1">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>

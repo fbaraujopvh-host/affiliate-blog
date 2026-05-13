@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #FF9900;
+  --color-brand-dark: #e68a00;
+  --color-brand-light: #ffb347;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-gray-50 text-gray-800 antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-bold leading-tight text-gray-900; }
+  a { @apply transition-colors duration-200; }
+
+  .prose h2 { @apply text-2xl mt-8 mb-4; }
+  .prose h3 { @apply text-xl mt-6 mb-3; }
+  .prose p  { @apply mb-4 leading-relaxed text-gray-700; }
+  .prose ul { @apply list-disc list-inside mb-4 space-y-1 text-gray-700; }
+  .prose ol { @apply list-decimal list-inside mb-4 space-y-1 text-gray-700; }
+  .prose a  { @apply text-amber-600 underline hover:text-amber-800; }
+  .prose blockquote { @apply border-l-4 border-amber-400 pl-4 italic text-gray-600 my-6; }
+  .prose img { @apply rounded-xl my-6 w-full; }
+  .prose strong { @apply font-semibold text-gray-900; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600
+           text-white font-semibold px-5 py-2.5 rounded-lg
+           transition-colors duration-200 shadow-sm;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-gray-300 hover:border-amber-400
+           text-gray-700 hover:text-amber-700 font-medium px-5 py-2.5 rounded-lg
+           transition-colors duration-200 bg-white;
+  }
+  .badge {
+    @apply inline-block text-xs font-semibold uppercase tracking-wide px-2.5 py-0.5 rounded-full;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300;
+  }
+}

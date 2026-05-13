@@ -1,0 +1,179 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import ProductCard from '../../components/ProductCard.astro';
+
+const publishedAt = new Date('2024-11-15');
+const dateStr = publishedAt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const products = [
+  {
+    name: 'JBL Tune 520BT Bluetooth 5.3',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80',
+    price: 'R$ 249,00',
+    oldPrice: 'R$ 349,00',
+    rating: 4.5,
+    reviewCount: 8420,
+    affiliateUrl: '#',
+    badge: '🥇 Melhor custo-benefício',
+    pros: ['57h de bateria', 'Pure Bass Sound', 'Dobrável e leve'],
+  },
+  {
+    name: 'Sony WH-1000XM5 Cancelamento de Ruído',
+    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=300&q=80',
+    price: 'R$ 1.899,00',
+    rating: 5,
+    reviewCount: 23100,
+    affiliateUrl: '#',
+    badge: '🏆 Melhor premium',
+    pros: ['Cancelamento de ruído líder', '30h de bateria', 'Conforto superior'],
+  },
+  {
+    name: 'Edifier W820NB Plus ANC',
+    image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&q=80',
+    price: 'R$ 399,00',
+    oldPrice: 'R$ 499,00',
+    rating: 4,
+    reviewCount: 3210,
+    affiliateUrl: '#',
+    badge: '💡 Melhor intermediário',
+    pros: ['Cancelamento de ruído ativo', '49h de bateria', 'Hi-Res Audio'],
+  },
+];
+---
+
+<PageLayout
+  title="10 Melhores Fones Bluetooth de 2024 — MelhoresProdutos"
+  description="Testamos os principais fones Bluetooth do mercado. Confira análise completa com prós, contras e onde comprar mais barato."
+  type="article"
+>
+  <article class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6 flex items-center gap-2">
+      <a href="/" class="hover:text-amber-600">Início</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-amber-600">Blog</a>
+      <span>/</span>
+      <span class="text-gray-800">Melhores Fones Bluetooth</span>
+    </nav>
+
+    <!-- Header -->
+    <header class="mb-8">
+      <span class="badge bg-amber-100 text-amber-700 mb-3 inline-block">Eletrônicos</span>
+      <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
+        10 Melhores Fones de Ouvido Bluetooth de 2024
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-500">
+        <span>{dateStr}</span>
+        <span>·</span>
+        <span>8 min de leitura</span>
+        <span>·</span>
+        <span>Atualizado em novembro de 2024</span>
+      </div>
+    </header>
+
+    <!-- Hero image -->
+    <img
+      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900&q=85"
+      alt="Melhores fones Bluetooth 2024"
+      class="w-full rounded-2xl mb-8 aspect-video object-cover"
+    />
+
+    <!-- Intro -->
+    <div class="prose max-w-none mb-10">
+      <p>
+        Com tantas opções no mercado, escolher um bom fone Bluetooth pode ser confuso. Neste guia,
+        <strong>testamos e comparamos os 10 melhores modelos disponíveis na Amazon Brasil</strong>
+        considerando qualidade de som, cancelamento de ruído, duração de bateria e custo-benefício.
+      </p>
+      <p>
+        Seja para academia, trabalho em home office ou para ouvir música no dia a dia, tem um modelo
+        ideal para cada necessidade — e orçamento. Vamos lá?
+      </p>
+    </div>
+
+    <!-- Quick picks -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">⚡ Resumo Rápido — Nossas Escolhas</h2>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-start gap-2"><span class="font-bold text-amber-600 shrink-0">🥇 Melhor custo-benefício:</span> JBL Tune 520BT</li>
+        <li class="flex items-start gap-2"><span class="font-bold text-amber-600 shrink-0">🏆 Melhor premium:</span> Sony WH-1000XM5</li>
+        <li class="flex items-start gap-2"><span class="font-bold text-amber-600 shrink-0">💡 Melhor intermediário:</span> Edifier W820NB Plus</li>
+        <li class="flex items-start gap-2"><span class="font-bold text-amber-600 shrink-0">🎯 Melhor para esportes:</span> Beats Fit Pro</li>
+        <li class="flex items-start gap-2"><span class="font-bold text-amber-600 shrink-0">💸 Melhor econômico:</span> Xiaomi Redmi Buds 5</li>
+      </ul>
+    </div>
+
+    <!-- Top pick affiliate box -->
+    <AffiliateBox
+      productName="JBL Tune 520BT — Nossa Recomendação #1"
+      productImage="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80"
+      price="R$ 249,00"
+      oldPrice="R$ 349,00"
+      affiliateUrl="#"
+      rating={5}
+      note="O melhor fone Bluetooth custo-benefício de 2024 — 57h de bateria, Pure Bass e design dobrável."
+    />
+
+    <!-- Content -->
+    <div class="prose max-w-none">
+      <h2>1. JBL Tune 520BT — Melhor Custo-Benefício</h2>
+      <p>
+        O JBL Tune 520BT é, disparado, o melhor fone Bluetooth para quem quer qualidade sem gastar muito.
+        Com <strong>57 horas de bateria</strong>, tecnologia Pure Bass e compatibilidade com dois dispositivos simultâneos,
+        ele entrega muito mais do que o preço sugere.
+      </p>
+      <p>
+        O design é leve (160g) e dobrável, facilitando o transporte. A qualidade de chamada também impressiona:
+        microfone com cancelamento de ruído ambiental deixa sua voz clara mesmo em ambientes barulhentos.
+      </p>
+
+      <h2>2. Sony WH-1000XM5 — O Melhor do Mercado</h2>
+      <p>
+        Se o orçamento não é problema, o Sony WH-1000XM5 é simplesmente o melhor fone Bluetooth do mercado.
+        O cancelamento de ruído ativo é o mais eficiente disponível, ideal para home office e viagens de avião.
+      </p>
+      <p>
+        Com 30 horas de bateria e qualidade de áudio Hi-Res com LDAC, a experiência de escuta é cinematográfica.
+        O único ponto negativo: o preço salgado.
+      </p>
+
+      <h2>Como Escolher o Seu Fone Bluetooth?</h2>
+      <p>Antes de comprar, considere esses fatores:</p>
+      <ul>
+        <li><strong>Uso principal:</strong> Academia exige mais segurança no encaixe; home office pede cancelamento de ruído</li>
+        <li><strong>Duração de bateria:</strong> Para viagens longas, priorize modelos com mais de 30h</li>
+        <li><strong>Cancelamento de ruído (ANC):</strong> Essencial se você trabalha em ambientes barulhentos</li>
+        <li><strong>Codecs de áudio:</strong> LDAC e aptX oferecem qualidade superior ao SBC padrão</li>
+        <li><strong>Orçamento:</strong> Existe boa opção em todas as faixas de preço</li>
+      </ul>
+    </div>
+
+    <!-- Product grid -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Compare os Melhores Modelos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {products.map((p) => <ProductCard {...p} />)}
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="prose max-w-none mt-10">
+      <h2>Conclusão</h2>
+      <p>
+        Para a maioria das pessoas, o <strong>JBL Tune 520BT</strong> é a escolha certa: excelente qualidade de som,
+        bateria de dar inveja e preço acessível. Se você prioriza cancelamento de ruído e qualidade premium,
+        o Sony WH-1000XM5 não tem igual.
+      </p>
+      <p>
+        Qualquer que seja sua escolha, comprar pela Amazon garante entrega rápida e política de devolução simples.
+      </p>
+    </div>
+
+    <!-- Affiliate disclosure -->
+    <div class="mt-12 p-4 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-500">
+      <strong>Divulgação:</strong> Este artigo contém links de afiliado para a Amazon. Se você comprar através deles,
+      recebemos uma pequena comissão sem custo adicional para você. Isso nos ajuda a continuar produzindo conteúdo gratuito e independente.
+    </div>
+  </article>
+</PageLayout>

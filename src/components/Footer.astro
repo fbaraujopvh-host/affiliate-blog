@@ -1,0 +1,56 @@
+---
+const year = new Date().getFullYear();
+
+const links = {
+  Blog: [
+    { href: '/blog', label: 'Todos os artigos' },
+    { href: '/melhores-produtos', label: 'Melhores produtos' },
+    { href: '/categoria/eletronicos', label: 'Eletrônicos' },
+    { href: '/categoria/casa', label: 'Casa & Cozinha' },
+  ],
+  Sobre: [
+    { href: '/sobre', label: 'Quem somos' },
+    { href: '/contato', label: 'Contato' },
+    { href: '/politica-de-privacidade', label: 'Privacidade' },
+    { href: '/divulgacao-afiliados', label: 'Política de Afiliados' },
+  ],
+};
+---
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <a href="/" class="flex items-center gap-2 font-bold text-lg text-white mb-3">
+          <span class="bg-amber-500 text-white rounded-lg px-2 py-0.5 text-sm font-black">★</span>
+          MelhoresProdutos
+        </a>
+        <p class="text-sm leading-relaxed">
+          Análises honestas e recomendações dos melhores produtos da Amazon para facilitar sua decisão de compra.
+        </p>
+      </div>
+
+      <!-- Links -->
+      {Object.entries(links).map(([section, items]) => (
+        <div>
+          <h3 class="text-white font-semibold mb-3">{section}</h3>
+          <ul class="space-y-2">
+            {items.map(({ href, label }) => (
+              <li>
+                <a href={href} class="text-sm hover:text-amber-400 transition-colors">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+      <p>&copy; {year} MelhoresProdutos. Todos os direitos reservados.</p>
+      <p class="text-center">
+        Participante do Programa de Associados da Amazon. Ao comprar pelos nossos links, recebemos uma comissão sem custo adicional para você.
+      </p>
+    </div>
+  </div>
+</footer>

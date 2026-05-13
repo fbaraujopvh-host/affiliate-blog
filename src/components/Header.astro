@@ -1,0 +1,78 @@
+---
+const nav = [
+  { href: '/', label: 'Início' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/categoria/eletronicos', label: 'Eletrônicos' },
+  { href: '/categoria/casa', label: 'Casa & Cozinha' },
+  { href: '/categoria/esportes', label: 'Esportes' },
+  { href: '/melhores-produtos', label: '⭐ Top Produtos' },
+];
+
+const current = Astro.url.pathname;
+---
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 font-bold text-xl text-gray-900">
+        <span class="bg-amber-500 text-white rounded-lg px-2 py-0.5 text-sm font-black">★</span>
+        MelhoresProdutos
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden md:flex items-center gap-1">
+        {nav.map(({ href, label }) => (
+          <a
+            href={href}
+            class:list={[
+              'px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
+              current === href || (href !== '/' && current.startsWith(href))
+                ? 'bg-amber-50 text-amber-700'
+                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50',
+            ]}
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA -->
+      <a
+        href="/melhores-produtos"
+        class="hidden md:inline-flex btn-primary text-sm"
+      >
+        Ver Ofertas
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menu-btn"
+        class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+        aria-label="Abrir menu"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="mobile-menu" class="hidden md:hidden pb-3 border-t border-gray-100 pt-3">
+      {nav.map(({ href, label }) => (
+        <a
+          href={href}
+          class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

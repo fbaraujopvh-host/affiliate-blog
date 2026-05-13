@@ -1,0 +1,81 @@
+---
+interface Props {
+  name: string;
+  image: string;
+  price: string;
+  oldPrice?: string;
+  rating: number;
+  reviewCount: number;
+  affiliateUrl: string;
+  badge?: string;
+  pros?: string[];
+}
+
+const { name, image, price, oldPrice, rating, reviewCount, affiliateUrl, badge, pros = [] } = Astro.props;
+
+const stars = Array.from({ length: 5 }, (_, i) => i < Math.floor(rating) ? 'full' : i < rating ? 'half' : 'empty');
+---
+
+<div class="card overflow-hidden flex flex-col">
+  <!-- Badge -->
+  {badge && (
+    <div class="bg-amber-500 text-white text-xs font-bold text-center py-1 px-3">
+      {badge}
+    </div>
+  )}
+
+  <!-- Image -->
+  <div class="p-4 bg-gray-50 flex items-center justify-center aspect-square">
+    <img src={image} alt={name} class="max-h-40 object-contain" loading="lazy" />
+  </div>
+
+  <div class="p-4 flex flex-col flex-1 gap-3">
+    <!-- Name -->
+    <h3 class="text-sm font-semibold text-gray-900 leading-snug line-clamp-3">{name}</h3>
+
+    <!-- Stars -->
+    <div class="flex items-center gap-1.5">
+      <div class="flex items-center gap-0.5 text-amber-400">
+        {stars.map((type) => (
+          <svg class="w-4 h-4" fill={type === 'empty' ? 'none' : 'currentColor'} stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+          </svg>
+        ))}
+      </div>
+      <span class="text-xs text-gray-500">({reviewCount.toLocaleString('pt-BR')})</span>
+    </div>
+
+    <!-- Pros -->
+    {pros.length > 0 && (
+      <ul class="text-xs text-gray-600 space-y-1">
+        {pros.slice(0, 3).map((pro) => (
+          <li class="flex items-start gap-1.5">
+            <span class="text-green-500 mt-0.5">✓</span>
+            {pro}
+          </li>
+        ))}
+      </ul>
+    )}
+
+    <!-- Price -->
+    <div class="mt-auto">
+      {oldPrice && (
+        <p class="text-xs text-gray-400 line-through">{oldPrice}</p>
+      )}
+      <p class="text-xl font-bold text-gray-900">{price}</p>
+    </div>
+
+    <!-- CTA -->
+    <a
+      href={affiliateUrl}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      class="btn-primary justify-center text-sm"
+    >
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.5 2C13.5 2 15.8 4.2 16 9.5M4.5 11.5C4.5 11.5 5 7 9 5.5M15.5 21C15.5 21 12 21.5 9.5 20L7 22L5 18.5C5 18.5 2 16 2 12.5C2 9 4.5 7.5 4.5 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Ver na Amazon
+    </a>
+  </div>
+</div>

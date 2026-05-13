@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  excerpt: string;
+  image: string;
+  category: string;
+  publishedAt: Date;
+  readingTime?: number;
+}
+
+const { title, slug, excerpt, image, category, publishedAt, readingTime = 5 } = Astro.props;
+
+const dateStr = publishedAt.toLocaleDateString('pt-BR', {
+  day: '2-digit',
+  month: 'short',
+  year: 'numeric',
+});
+---
+
+<article class="card overflow-hidden group">
+  <a href={`/blog/${slug}`}>
+    <div class="overflow-hidden aspect-video bg-gray-100">
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        loading="lazy"
+      />
+    </div>
+  </a>
+
+  <div class="p-5">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="badge bg-amber-100 text-amber-700">{category}</span>
+      <span class="text-xs text-gray-400">{dateStr}</span>
+      <span class="text-xs text-gray-400">· {readingTime} min</span>
+    </div>
+
+    <a href={`/blog/${slug}`}>
+      <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors leading-snug line-clamp-2">
+        {title}
+      </h2>
+    </a>
+
+    <p class="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">{excerpt}</p>
+
+    <a href={`/blog/${slug}`} class="text-sm font-semibold text-amber-600 hover:text-amber-800 inline-flex items-center gap-1">
+      Ler artigo
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
