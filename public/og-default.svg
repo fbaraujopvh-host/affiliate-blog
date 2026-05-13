@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Fundo principal -->
+  <rect width="1200" height="630" fill="#412402"/>
+
+  <!-- Círculos decorativos de fundo -->
+  <circle cx="1080" cy="80" r="240" fill="#633806" opacity="0.5"/>
+  <circle cx="1120" cy="580" r="180" fill="#633806" opacity="0.35"/>
+  <circle cx="100" cy="540" r="160" fill="#633806" opacity="0.3"/>
+  <circle cx="60" cy="120" r="100" fill="#854F0B" opacity="0.25"/>
+
+  <!-- Linha decorativa topo -->
+  <rect x="80" y="80" width="120" height="4" rx="2" fill="#EF9F27"/>
+
+  <!-- Badge -->
+  <rect x="80" y="110" width="220" height="42" rx="21" fill="#EF9F27"/>
+  <text
+    x="190"
+    y="137"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="18"
+    font-weight="700"
+    fill="#412402"
+    letter-spacing="1"
+  >EU TE INDICO</text>
+
+  <!-- Headline linha 1 -->
+  <text
+    x="80"
+    y="260"
+    font-family="Georgia, serif"
+    font-size="78"
+    font-weight="700"
+    fill="white"
+    letter-spacing="-1"
+  >Indicações</text>
+
+  <!-- Headline linha 2 -->
+  <text
+    x="80"
+    y="355"
+    font-family="Georgia, serif"
+    font-size="78"
+    font-weight="700"
+    fill="white"
+    letter-spacing="-1"
+  >honestas dos</text>
+
+  <!-- Headline linha 3 - destaque âmbar -->
+  <text
+    x="80"
+    y="450"
+    font-family="Georgia, serif"
+    font-size="78"
+    font-weight="700"
+    fill="#FAC775"
+    letter-spacing="-1"
+  >melhores produtos</text>
+
+  <!-- Tagline -->
+  <text
+    x="80"
+    y="530"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    fill="#FAC775"
+    opacity="0.75"
+    letter-spacing="0.5"
+  >Para você comprar com confiança e economizar tempo</text>
+
+  <!-- URL -->
+  <text
+    x="80"
+    y="580"
+    font-family="Arial, sans-serif"
+    font-size="22"
+    fill="#EF9F27"
+    letter-spacing="1"
+  >euteindico.com</text>
+
+  <!-- Estrela decorativa grande -->
+  <text
+    x="980"
+    y="420"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="220"
+    fill="#EF9F27"
+    opacity="0.85"
+  >★</text>
+
+  <!-- Estrela pequena decorativa -->
+  <text
+    x="870"
+    y="180"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="48"
+    fill="#FAC775"
+    opacity="0.5"
+  >★</text>
+
+  <!-- Linha decorativa rodapé -->
+  <rect x="80" y="600" width="1040" height="1" fill="#633806"/>
+</svg>
