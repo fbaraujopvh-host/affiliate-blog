@@ -1,0 +1,38 @@
+---
+interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'light' | 'dark';
+}
+
+const { size = 'md', variant = 'light' } = Astro.props;
+
+const sizes = {
+  sm: { badge: 'px-1.5 py-0.5 text-xs', text: 'text-base', gap: 'gap-1.5' },
+  md: { badge: 'px-2 py-0.5 text-sm',   text: 'text-xl',  gap: 'gap-2'   },
+  lg: { badge: 'px-3 py-1 text-base',   text: 'text-3xl', gap: 'gap-3'   },
+};
+
+const variants = {
+  light: { name: 'text-amber-900', sub: 'text-amber-600' },
+  dark:  { name: 'text-white',     sub: 'text-amber-300' },
+};
+
+const s = sizes[size];
+const v = variants[variant];
+---
+
+<a href="/" class={`flex items-center ${s.gap} font-bold no-underline`} aria-label="Eu Te Indico — página inicial">
+  <!-- Badge ★ -->
+  <span
+    class={`bg-amber-400 text-white rounded-lg font-black leading-none ${s.badge}`}
+    aria-hidden="true"
+  >★</span>
+
+  <!-- Nome -->
+  <span class={`${s.text} leading-none`}>
+    <span class={v.name} style="font-family: Georgia, serif;">Eu Te </span><span
+      class={v.sub}
+      style="font-family: Georgia, serif;"
+    >Indico</span>
+  </span>
+</a>
