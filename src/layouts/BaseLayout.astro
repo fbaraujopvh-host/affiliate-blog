@@ -10,12 +10,12 @@ interface Props {
 
 const {
   title,
-  description = 'As melhores análises e recomendações de produtos da Amazon.',
+  description = 'Indicações honestas dos melhores produtos para você comprar com confiança.',
   image = '/og-default.jpg',
   type = 'website',
 } = Astro.props;
 
-const siteUrl = import.meta.env.SITE ?? 'https://seublog.com.br';
+const siteUrl = import.meta.env.SITE ?? 'https://euteindico.com';
 const canonical = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
