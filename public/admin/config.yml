@@ -164,3 +164,31 @@ collections:
                 name: slug
                 widget: string
                 hint: "Ex: eletronicos (sem acento, sem espaço)"
+
+      - label: Rodapé
+        name: rodape
+        file: src/content/rodape/rodape.json
+        fields:
+          - label: "Descrição da marca"
+            name: descricao
+            widget: text
+            hint: "Texto curto que aparece abaixo do logo no rodapé"
+          - label: Colunas de links
+            name: colunas
+            widget: list
+            fields:
+              - label: "Título da coluna"
+                name: titulo
+                widget: string
+                hint: "Ex: Blog, Sobre, Categorias"
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Texto do link
+                    name: label
+                    widget: string
+                  - label: URL do link
+                    name: href
+                    widget: string
+                    hint: "Ex: /blog ou https://..."

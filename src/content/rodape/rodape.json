@@ -1,0 +1,23 @@
+{
+  "descricao": "Indicações honestas dos melhores produtos para você comprar com confiança e economizar tempo.",
+  "colunas": [
+    {
+      "titulo": "Blog",
+      "links": [
+        { "label": "Todos os artigos", "href": "/blog" },
+        { "label": "Melhores produtos", "href": "/melhores-produtos" },
+        { "label": "Eletrônicos", "href": "/categoria/eletronicos" },
+        { "label": "Casa & Cozinha", "href": "/categoria/casa" }
+      ]
+    },
+    {
+      "titulo": "Sobre",
+      "links": [
+        { "label": "Quem somos", "href": "/sobre" },
+        { "label": "Contato", "href": "/contato" },
+        { "label": "Privacidade", "href": "/politica-de-privacidade" },
+        { "label": "Política de Afiliados", "href": "/divulgacao-afiliados" }
+      ]
+    }
+  ]
+}

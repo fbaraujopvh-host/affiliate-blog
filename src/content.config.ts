@@ -1,6 +1,24 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const rodape = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/rodape' }),
+  schema: z.object({
+    descricao: z.string(),
+    colunas: z.array(
+      z.object({
+        titulo: z.string(),
+        links: z.array(
+          z.object({
+            label: z.string(),
+            href: z.string(),
+          })
+        ),
+      })
+    ),
+  }),
+});
+
 const categorias = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/categorias' }),
   schema: z.object({
@@ -59,4 +77,4 @@ const products = defineCollection({
   }),
 });
 
-export const collections = { posts, products, paginas, categorias };
+export const collections = { posts, products, paginas, categorias, rodape };

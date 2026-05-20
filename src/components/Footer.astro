@@ -1,20 +1,13 @@
 ---
+import { getCollection } from 'astro:content';
+
 const year = new Date().getFullYear();
 
-const links = {
-  Blog: [
-    { href: '/blog', label: 'Todos os artigos' },
-    { href: '/melhores-produtos', label: 'Melhores produtos' },
-    { href: '/categoria/eletronicos', label: 'Eletrônicos' },
-    { href: '/categoria/casa', label: 'Casa & Cozinha' },
-  ],
-  Sobre: [
-    { href: '/sobre', label: 'Quem somos' },
-    { href: '/contato', label: 'Contato' },
-    { href: '/politica-de-privacidade', label: 'Privacidade' },
-    { href: '/divulgacao-afiliados', label: 'Política de Afiliados' },
-  ],
-};
+const rodapeCollection = await getCollection('rodape');
+const rodapeData = rodapeCollection.find(r => r.id === 'rodape')?.data;
+
+const descricao = rodapeData?.descricao ?? 'Indicações honestas dos melhores produtos para você comprar com confiança e economizar tempo.';
+const colunas = rodapeData?.colunas ?? [];
 ---
 
 <footer class="bg-gray-900 text-gray-400 mt-16">
@@ -26,17 +19,15 @@ const links = {
           <span class="bg-amber-500 text-white rounded-lg px-2 py-0.5 text-sm font-black">★</span>
           Eu Te Indico
         </a>
-        <p class="text-sm leading-relaxed">
-          Indicações honestas dos melhores produtos para você comprar com confiança e economizar tempo.
-        </p>
+        <p class="text-sm leading-relaxed">{descricao}</p>
       </div>
 
       <!-- Links -->
-      {Object.entries(links).map(([section, items]) => (
+      {colunas.map(({ titulo, links }) => (
         <div>
-          <h3 class="text-white font-semibold mb-3">{section}</h3>
+          <h3 class="text-white font-semibold mb-3">{titulo}</h3>
           <ul class="space-y-2">
-            {items.map(({ href, label }) => (
+            {links.map(({ href, label }) => (
               <li>
                 <a href={href} class="text-sm hover:text-amber-400 transition-colors">{label}</a>
               </li>
