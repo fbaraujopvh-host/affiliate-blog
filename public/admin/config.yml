@@ -9,9 +9,6 @@ backend:
 media_folder: public/uploads
 public_folder: /uploads
 
-# Interface em português
-locale: pt
-
 collections:
   # ── POSTS DO BLOG ──────────────────────────────────────────────
   - name: posts
