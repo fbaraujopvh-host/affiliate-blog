@@ -1,6 +1,20 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+const paginas = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/content/paginas' }),
+  schema: z.object({
+    heroBadge: z.string().optional(),
+    heroTitle: z.string().optional(),
+    heroSubtitle: z.string().optional(),
+    heroDescription: z.string().optional(),
+    heroCta1Label: z.string().optional(),
+    heroCta1Url: z.string().optional(),
+    heroCta2Label: z.string().optional(),
+    heroCta2Url: z.string().optional(),
+  }),
+});
+
 const posts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
   schema: z.object({
@@ -24,7 +38,7 @@ const products = defineCollection({
     oldPrice: z.string().optional(),
     rating: z.number().min(1).max(5),
     reviewCount: z.number().default(0),
-    affiliateUrl: z.string().url(),
+    affiliateUrl: z.string(),
     badge: z.string().optional(),
     pros: z.array(z.string()).default([]),
     category: z.string(),
@@ -32,4 +46,4 @@ const products = defineCollection({
   }),
 });
 
-export const collections = { posts, products };
+export const collections = { posts, products, paginas };

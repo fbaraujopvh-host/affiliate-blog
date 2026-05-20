@@ -1,0 +1,13 @@
+{
+  "name": "Aspirador Robô Xiaomi Robot Vacuum",
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80",
+  "price": "R$ 799,00",
+  "oldPrice": "R$ 1.099,00",
+  "rating": 4,
+  "reviewCount": 5680,
+  "affiliateUrl": "#",
+  "badge": "27% OFF",
+  "pros": ["Mapeamento LDS", "2500 Pa de sucção", "App e controle por voz"],
+  "category": "casa",
+  "featured": false
+}

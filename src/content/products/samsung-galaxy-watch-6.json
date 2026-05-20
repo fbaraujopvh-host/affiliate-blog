@@ -1,0 +1,12 @@
+{
+  "name": "Smartwatch Samsung Galaxy Watch 6",
+  "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=80",
+  "price": "R$ 1.299,00",
+  "oldPrice": "R$ 1.699,00",
+  "rating": 4.5,
+  "reviewCount": 9870,
+  "affiliateUrl": "#",
+  "pros": ["Monitor de saúde avançado", "GPS integrado", "WearOS 4"],
+  "category": "eletronicos",
+  "featured": false
+}

@@ -5,12 +5,12 @@ backend:
   auth_endpoint: /api/auth
   base_url: https://euteindico.com
 
-# Salva media na pasta public/uploads
 media_folder: public/uploads
 public_folder: /uploads
 
 collections:
-  # ── POSTS DO BLOG ──────────────────────────────────────────────
+
+  # ── POSTS DO BLOG ──────────────────────────────────────────────────────────
   - name: posts
     label: Posts do Blog
     label_singular: Post
@@ -19,8 +19,12 @@ collections:
     slug: "{{slug}}"
     preview_path: /blog/{{slug}}
     fields:
-      - { label: Título, name: title, widget: string }
-      - { label: Resumo, name: excerpt, widget: text }
+      - label: Título
+        name: title
+        widget: string
+      - label: Resumo
+        name: excerpt
+        widget: text
       - label: Categoria
         name: category
         widget: select
@@ -31,42 +35,80 @@ collections:
           - { label: Informática, value: informatica }
           - { label: Beleza, value: beleza }
           - { label: Livros, value: livros }
-      - { label: Imagem de Capa, name: image, widget: image }
-      - { label: Texto Alternativo da Imagem, name: imageAlt, widget: string, required: false }
-      - { label: Data de Publicação, name: publishedAt, widget: datetime, format: YYYY-MM-DD }
-      - { label: Tempo de Leitura (min), name: readingTime, widget: number, default: 5 }
-      - { label: Destaque na Home?, name: featured, widget: boolean, default: false }
-      - { label: Conteúdo, name: body, widget: markdown }
+      - label: Imagem de Capa
+        name: image
+        widget: image
+      - label: Texto Alternativo da Imagem
+        name: imageAlt
+        widget: string
+        required: false
+      - label: Data de Publicação
+        name: publishedAt
+        widget: datetime
+        format: YYYY-MM-DD
+      - label: Tempo de Leitura (min)
+        name: readingTime
+        widget: number
+        default: 5
+      - label: Destaque na Home
+        name: featured
+        widget: boolean
+        default: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
 
-  # ── PRODUTOS ───────────────────────────────────────────────────
+  # ── PRODUTOS ───────────────────────────────────────────────────────────────
   - name: products
     label: Produtos
     label_singular: Produto
     folder: src/content/products
     create: true
     slug: "{{slug}}"
+    extension: json
+    format: json
     fields:
-      - { label: Nome do Produto, name: name, widget: string }
-      - { label: Imagem, name: image, widget: image }
-      - { label: Preço, name: price, widget: string, hint: "Ex: R$ 249,00" }
-      - { label: Preço Antigo, name: oldPrice, widget: string, required: false, hint: "Deixe vazio se não houver desconto" }
-      - label: Avaliação (estrelas)
+      - label: Nome do Produto
+        name: name
+        widget: string
+      - label: Imagem
+        name: image
+        widget: image
+      - label: Preço
+        name: price
+        widget: string
+        hint: "Ex: R$ 249,00"
+      - label: Preço Antigo
+        name: oldPrice
+        widget: string
+        required: false
+        hint: "Deixe vazio se não houver desconto"
+      - label: Avaliação (1 a 5 estrelas)
         name: rating
         widget: number
         min: 1
         max: 5
         step: 0.5
         default: 4
-      - { label: Nº de Avaliações, name: reviewCount, widget: number, default: 0 }
-      - { label: Link de Afiliado (Amazon), name: affiliateUrl, widget: string }
-      - label: "Badge (ex: Mais Vendido)"
+      - label: Número de Avaliações
+        name: reviewCount
+        widget: number
+        default: 0
+      - label: Link de Afiliado Amazon
+        name: affiliateUrl
+        widget: string
+      - label: Badge
         name: badge
         widget: string
         required: false
+        hint: "Ex: Mais Vendido, 30% OFF"
       - label: Pontos Positivos
         name: pros
         widget: list
-        field: { label: Ponto, name: item, widget: string }
+        field:
+          label: Ponto
+          name: item
+          widget: string
       - label: Categoria
         name: category
         widget: select
@@ -76,4 +118,24 @@ collections:
           - { label: Esportes, value: esportes }
           - { label: Informática, value: informatica }
           - { label: Beleza, value: beleza }
-      - { label: Destaque na Home?, name: featured, widget: boolean, default: false }
+      - label: Destaque na Home
+        name: featured
+        widget: boolean
+        default: false
+
+  # ── PÁGINAS ────────────────────────────────────────────────────────────────
+  - name: paginas
+    label: Páginas
+    files:
+      - label: Página Inicial (Home)
+        name: home
+        file: src/content/paginas/home.json
+        fields:
+          - { label: Badge do Hero, name: heroBadge, widget: string }
+          - { label: Título Principal, name: heroTitle, widget: string }
+          - { label: Subtítulo, name: heroSubtitle, widget: string }
+          - { label: Descrição, name: heroDescription, widget: text }
+          - { label: "Botão 1 — Texto", name: heroCta1Label, widget: string }
+          - { label: "Botão 1 — Link", name: heroCta1Url, widget: string }
+          - { label: "Botão 2 — Texto", name: heroCta2Label, widget: string }
+          - { label: "Botão 2 — Link", name: heroCta2Url, widget: string }
