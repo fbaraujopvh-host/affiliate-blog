@@ -1,0 +1,79 @@
+backend:
+  name: github
+  repo: fbaraujopvh-host/affiliate-blog
+  branch: main
+  auth_endpoint: /api/auth
+  base_url: https://euteindico.com
+
+# Salva media na pasta public/uploads
+media_folder: public/uploads
+public_folder: /uploads
+
+# Interface em português
+locale: pt
+
+collections:
+  # ── POSTS DO BLOG ──────────────────────────────────────────────
+  - name: posts
+    label: Posts do Blog
+    label_singular: Post
+    folder: src/content/posts
+    create: true
+    slug: "{{slug}}"
+    preview_path: /blog/{{slug}}
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Resumo, name: excerpt, widget: text }
+      - label: Categoria
+        name: category
+        widget: select
+        options:
+          - { label: Eletrônicos, value: eletronicos }
+          - { label: Casa & Cozinha, value: casa }
+          - { label: Esportes, value: esportes }
+          - { label: Informática, value: informatica }
+          - { label: Beleza, value: beleza }
+          - { label: Livros, value: livros }
+      - { label: Imagem de Capa, name: image, widget: image }
+      - { label: Texto Alternativo da Imagem, name: imageAlt, widget: string, required: false }
+      - { label: Data de Publicação, name: publishedAt, widget: datetime, format: YYYY-MM-DD }
+      - { label: Tempo de Leitura (min), name: readingTime, widget: number, default: 5 }
+      - { label: Destaque na Home?, name: featured, widget: boolean, default: false }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  # ── PRODUTOS ───────────────────────────────────────────────────
+  - name: products
+    label: Produtos
+    label_singular: Produto
+    folder: src/content/products
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Nome do Produto, name: name, widget: string }
+      - { label: Imagem, name: image, widget: image }
+      - { label: Preço, name: price, widget: string, hint: "Ex: R$ 249,00" }
+      - { label: Preço Antigo, name: oldPrice, widget: string, required: false, hint: "Deixe vazio se não houver desconto" }
+      - label: Avaliação (estrelas)
+        name: rating
+        widget: number
+        min: 1
+        max: 5
+        step: 0.5
+        default: 4
+      - { label: Nº de Avaliações, name: reviewCount, widget: number, default: 0 }
+      - { label: Link de Afiliado (Amazon), name: affiliateUrl, widget: string }
+      - { label: Badge (ex: Mais Vendido), name: badge, widget: string, required: false }
+      - label: Pontos Positivos
+        name: pros
+        widget: list
+        field: { label: Ponto, name: item, widget: string }
+      - label: Categoria
+        name: category
+        widget: select
+        options:
+          - { label: Eletrônicos, value: eletronicos }
+          - { label: Casa & Cozinha, value: casa }
+          - { label: Esportes, value: esportes }
+          - { label: Informática, value: informatica }
+          - { label: Beleza, value: beleza }
+      - { label: Destaque na Home?, name: featured, widget: boolean, default: false }
