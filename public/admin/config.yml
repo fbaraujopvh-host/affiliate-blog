@@ -59,7 +59,10 @@ collections:
         default: 4
       - { label: Nº de Avaliações, name: reviewCount, widget: number, default: 0 }
       - { label: Link de Afiliado (Amazon), name: affiliateUrl, widget: string }
-      - { label: Badge (ex: Mais Vendido), name: badge, widget: string, required: false }
+      - label: "Badge (ex: Mais Vendido)"
+        name: badge
+        widget: string
+        required: false
       - label: Pontos Positivos
         name: pros
         widget: list
