@@ -139,3 +139,28 @@ collections:
           - { label: "Botão 1 — Link", name: heroCta1Url, widget: string }
           - { label: "Botão 2 — Texto", name: heroCta2Label, widget: string }
           - { label: "Botão 2 — Link", name: heroCta2Url, widget: string }
+
+  # ── CONFIGURAÇÕES ──────────────────────────────────────────────────────────
+  - name: configuracoes
+    label: Configurações
+    files:
+      - label: Categorias
+        name: categorias
+        file: src/content/categorias/categorias.json
+        fields:
+          - label: Categorias
+            name: items
+            widget: list
+            fields:
+              - label: Nome
+                name: name
+                widget: string
+                hint: "Ex: Eletrônicos"
+              - label: "Ícone (emoji)"
+                name: icon
+                widget: string
+                hint: "Ex: 📱"
+              - label: "Slug (parte da URL)"
+                name: slug
+                widget: string
+                hint: "Ex: eletronicos (sem acento, sem espaço)"

@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "name": "Eletrônicos", "icon": "📱", "slug": "eletronicos" },
+    { "name": "Casa & Cozinha", "icon": "🏠", "slug": "casa" },
+    { "name": "Esportes", "icon": "🏋️", "slug": "esportes" },
+    { "name": "Informática", "icon": "💻", "slug": "informatica" },
+    { "name": "Beleza", "icon": "✨", "slug": "beleza" },
+    { "name": "Livros", "icon": "📚", "slug": "livros" }
+  ]
+}

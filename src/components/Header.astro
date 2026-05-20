@@ -1,10 +1,13 @@
 ---
+import { getCollection } from 'astro:content';
+
+const categoriasCollection = await getCollection('categorias');
+const categorias = categoriasCollection.find(c => c.id === 'categorias')?.data.items ?? [];
+
 const nav = [
   { href: '/', label: 'Início' },
   { href: '/blog', label: 'Blog' },
-  { href: '/categoria/eletronicos', label: 'Eletrônicos' },
-  { href: '/categoria/casa', label: 'Casa & Cozinha' },
-  { href: '/categoria/esportes', label: 'Esportes' },
+  ...categorias.map(c => ({ href: `/categoria/${c.slug}`, label: c.name })),
   { href: '/melhores-produtos', label: '⭐ Top Produtos' },
 ];
 

@@ -8,6 +8,7 @@ import ProductCard from '../components/ProductCard.astro';
 const allPosts = await getCollection('posts');
 const allProducts = await getCollection('products');
 const paginasCollection = await getCollection('paginas');
+const categoriasCollection = await getCollection('categorias');
 
 const recentPosts = allPosts
   .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime())
@@ -30,14 +31,12 @@ const hero = {
   cta2Url: homeData?.heroCta2Url ?? '/blog',
 };
 
-const categories = [
-  { name: 'Eletrônicos', icon: '📱', href: '/categoria/eletronicos' },
-  { name: 'Casa & Cozinha', icon: '🏠', href: '/categoria/casa' },
-  { name: 'Esportes', icon: '🏋️', href: '/categoria/esportes' },
-  { name: 'Informática', icon: '💻', href: '/categoria/informatica' },
-  { name: 'Beleza', icon: '✨', href: '/categoria/beleza' },
-  { name: 'Livros', icon: '📚', href: '/categoria/livros' },
-];
+const rawCategories = categoriasCollection.find(c => c.id === 'categorias')?.data.items ?? [];
+const categories = rawCategories.map(c => ({
+  name: c.name,
+  icon: c.icon,
+  href: `/categoria/${c.slug}`,
+}));
 ---
 
 <PageLayout
