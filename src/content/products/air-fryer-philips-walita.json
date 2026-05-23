@@ -1,13 +1,17 @@
 {
-  "name": "Fritadeira Air Fryer Philips Walita 4,1L",
-  "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=300&q=80",
-  "price": "R$ 499,00",
-  "oldPrice": "R$ 699,00",
+  "affiliateUrl": "https://amzn.to/4tLFtjv",
+  "oldPrice": "",
+  "badge": "TOP 1 de Vendas Amazon e + 1.000 Vendidos no Mercado Livre",
+  "pros": [
+    "1080P Nativo e 22000 Lumens:Bettdow projetor fornece resolução nativa de 1920*1080 é Suporte 4K.",
+    "Tecnologia WiFi 6 usada e alto-falantes HiFi integrados de 10W:Utilizamos a mais recente tecnologia WiFi 5G+2.4G neste projetor android Bluetooth, com uma velocidade de transmissão pelo menos 30% mais rápida do que outros retroprojetor portátil 4k.",
+    "Projetor Portatil:O projetor Bettdow fornece imagens com uma área de exibição mínima de 42 polegadas a um máximo de 300 polegadas, com uma distância de projeção entre 1,44-9.2 m. Proporção de aspecto: 4:3/16:9, relação de contraste da imagem: 20000:1, Vida útil da lâmpada: 30.000 horas."
+  ],
+  "price": "R$ 849,43 ",
+  "name": "EPSON Projetor Powerlite W01, 3000 Lúmens, WXGA (Wide Screen), HDMI, Branco, Bivolt",
+  "featured": true,
+  "reviewCount": 128,
+  "image": "/uploads/projetor.jpg",
   "rating": 4,
-  "reviewCount": 12340,
-  "affiliateUrl": "#",
-  "badge": "Mais Vendido",
-  "pros": ["4,1 litros de capacidade", "Timer digital", "Bandeja antiaderente"],
-  "category": "casa",
-  "featured": true
+  "category": "eletronicos"
 }
