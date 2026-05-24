@@ -1,13 +1,20 @@
 {
-  "name": "Cafeteira Nespresso Essenza Mini",
-  "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300&q=80",
-  "price": "R$ 529,00",
-  "oldPrice": "R$ 699,00",
-  "rating": 4.5,
-  "reviewCount": 18320,
-  "affiliateUrl": "#",
-  "badge": "Favorita dos Clientes",
-  "pros": ["Compacta e elegante", "Pronta em 25 segundos", "Pressão 19 bar"],
-  "category": "casa",
-  "featured": false
+  "affiliateUrl": "https://meli.la/1aVPaL5",
+  "oldPrice": "R$ 1.099,00",
+  "badge": "+100 câmeras vendidas no MERCADO LIVRE melhor custo benefício considerada pelos Motociclistas, Cliclistas e Caiaqueiros.",
+  "pros": [
+    "Vídeo em resolução 4K a 60fps para capturas nítidas e detalhadas.",
+    "Estabilização de imagem eletrônico (EIS) para vídeos suaves.",
+    "Lente grande angular de 170° para ampla visão.",
+    "À prova d'água até 5 metros de profundidade.",
+    "Tempo de gravação de até 1 hora e 15 minutos em 4K.",
+    "Suporta cartão micro SD de até 128GB (32GB incluso)."
+  ],
+  "price": "R$ 737,00",
+  "name": "Câmera Sport 4k Viran V9 60fps Controle Wifi + 32gb + Bastão Cor Preto",
+  "featured": true,
+  "reviewCount": 100,
+  "image": "/uploads/camera-v9.png",
+  "rating": 4,
+  "category": "eletronicos"
 }
