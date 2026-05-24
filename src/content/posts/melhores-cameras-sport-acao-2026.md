@@ -17,12 +17,12 @@ Neste comparativo, analisamos **4 modelos em faixas de preço diferentes**, com 
 
 ## 🏆 Resumo Rápido
 
-| Câmera | Resolução | Estabilização | À prova d'água | Preço aprox. |
-|---|---|---|---|---|
-| **Viran V9** | 4K 60fps | EIS | IP68 (5m) | ~R$ 250 |
-| **AKASO Brave 7 LE** | 4K 30fps | EIS 2.0 | 40m c/ case | ~R$ 1.299 |
-| **DJI Osmo Action 4** | 4K 120fps | HorizonSteady 360° | 18m nativo | ~R$ 2.800 |
-| **GoPro Hero 12 Black** | 5.3K 60fps | HyperSmooth 6.0 | 10m nativo | ~R$ 3.199 |
+| Câmera               | Resolução    | Estabilização        | Resistência à água | Preço aprox.  |
+| :------------------- | :----------- | :------------------- | :----------------- | :------------ |
+| **Viran V9**         | 4K 60fps     | EIS                  | IP68 — até 5m      | ~R$ 250       |
+| **AKASO Brave 7 LE** | 4K 30fps     | EIS 2.0 (6 eixos)   | até 40m c/ case    | ~R$ 1.299     |
+| **DJI Osmo Action 4**| 4K 120fps    | HorizonSteady 360°   | até 18m nativo     | ~R$ 2.800     |
+| **GoPro Hero 12**    | 5.3K 60fps   | HyperSmooth 6.0      | até 10m nativo     | ~R$ 3.199     |
 
 ---
 
