@@ -18,8 +18,13 @@ const current = Astro.url.pathname;
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="/logo.svg" alt="Eu Te Indico" class="h-14 w-auto" />
+      <a href="/" class="flex items-center gap-2 font-bold text-xl text-gray-900">
+        <span class="bg-amber-500 text-white rounded-lg w-8 h-8 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </span>
+        Eu Te Indico
       </a>
 
       <!-- Nav desktop -->
