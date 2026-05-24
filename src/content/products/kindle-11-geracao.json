@@ -1,11 +1,18 @@
 {
-  "name": "Kindle 11ª Geração 16GB com Luz",
-  "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80",
-  "price": "R$ 399,90",
+  "affiliateUrl": "https://amzn.to/4wGQpSd",
+  "badge": "+ 2000 Vendas - Melhor Fone do Mercado em Custo Benefício",
+  "pros": [
+    "MODO EXTRA BASS. Sinta toda a potência das suas músicas favoritas com o modo Extra Bass, que você ativa facilmente pressionando duas vezes o botão no fone. O isolamento passivo eficiente bloqueia ruídos externos, permitindo curtir cada batida com máxima intensidade.",
+    "55 HORAS DE BATERIA. Curta por até 55 horas suas playlists completas sem precisar recarregar. E quando precisar, basta usar o cabo USB-C para recarregar e em apenas 2 horas você já tem a carga completa para curtir mais uma maratona musical.",
+    "SOM POTENTE COM ASSINATURA PHILIPS. Drivers grandes e especialmente ajustados oferecem áudio detalhado, graves profundos e equilíbrio sonoro, garantindo qualidade superior e a assinatura exclusiva Philips para uma experiência musical única e envolvente.",
+    "FÁCIL DE TRANSPORTAR. Leve seu headphone Philips para qualquer lugar com facilidade. O design dobrável deixa as conchas planas, facilitando o armazenamento em bolsas ou mochilas.",
+    "CONFORTO PROLONGADO COM DESIGN OVER-EAR. Com arco acolchoado, conchas ajustáveis e formato over-ear, o headphone garante maciez, ergonomia e isolamento acústico passivo, oferecendo conforto duradouro e redução natural de ruídos externos."
+  ],
+  "price": "R$ 219,00",
+  "name": "PHILIPS, Headphone Bluetooth, TAH2300BK/00, Com Microfone, Até 55 horas de bateria, Design Over-ear, Dobrável, Preto",
+  "featured": true,
+  "reviewCount": 1473,
+  "image": "/uploads/fone-de-ouvido-ac_sl1000_.jpg",
   "rating": 5,
-  "reviewCount": 45600,
-  "affiliateUrl": "#",
-  "pros": ["Luz integrada ajustável", "Meses de bateria", "Resistente à água IPX8"],
-  "category": "eletronicos",
-  "featured": true
+  "category": "eletronicos"
 }
