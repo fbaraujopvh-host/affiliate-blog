@@ -1,13 +1,17 @@
 {
-  "name": "Fone JBL Tune 520BT Bluetooth 5.3",
-  "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=80",
-  "price": "R$ 249,00",
-  "oldPrice": "R$ 349,00",
+  "affiliateUrl": "https://meli.la/2kqDy22",
+  "oldPrice": "",
+  "badge": "5% OFF",
+  "pros": [
+    "Modelo: Camisa Feminina DryFit Brasil Copa do Mundo Presente Brinde Esporte Uniforme Evento Empresa Blusa",
+    "Gênero:  Feminino",
+    "Tipo de tecido: Dry Fit"
+  ],
+  "price": "R$ 99,90",
+  "name": "Camisa Copa Feminina Copa Do Brasil Camisa Dryfit Amarela",
+  "featured": true,
+  "reviewCount": 500,
+  "image": "/uploads/copa.png",
   "rating": 4.5,
-  "reviewCount": 8420,
-  "affiliateUrl": "#",
-  "badge": "28% OFF",
-  "pros": ["57h de bateria", "Pure Bass Sound", "Dobrável e leve"],
-  "category": "eletronicos",
-  "featured": true
+  "category": "beleza"
 }
