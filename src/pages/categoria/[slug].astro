@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+
+export async function getStaticPaths() {
+  const categoriasCollection = await getCollection('categorias');
+  const categorias = categoriasCollection.find(c => c.id === 'categorias')?.data.items ?? [];
+
+  return categorias.map((cat) => ({
+    params: { slug: cat.slug },
+    props: { categoria: cat },
+  }));
+}
+
+const { categoria } = Astro.props;
+
+const allProducts = await getCollection('products');
+const products = allProducts
+  .filter(p => p.data.category === categoria.slug)
+  .sort((a, b) => {
+    if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+    return b.data.rating - a.data.rating;
+  });
+---
+
+<PageLayout
+  title={`${categoria.icon} ${categoria.name} — Eu Te Indico`}
+  description={`Os melhores produtos de ${categoria.name} selecionados pela nossa equipe. Avaliados e comparados para você comprar com confiança.`}
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Header da categoria -->
+    <div class="mb-10">
+      <a href="/" class="text-sm text-amber-600 hover:text-amber-800 font-medium">← Início</a>
+      <div class="mt-4 flex items-center gap-3">
+        <span class="text-4xl">{categoria.icon}</span>
+        <div>
+          <h1 class="text-3xl font-black text-gray-900">{categoria.name}</h1>
+          <p class="text-gray-500 mt-1">
+            {products.length === 0
+              ? 'Nenhum produto cadastrado nesta categoria ainda.'
+              : `${products.length} produto${products.length > 1 ? 's' : ''} encontrado${products.length > 1 ? 's' : ''}`}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de produtos -->
+    {products.length === 0 ? (
+      <div class="text-center py-20">
+        <p class="text-5xl mb-4">🔍</p>
+        <p class="text-gray-500 text-lg">Nenhum produto nesta categoria ainda.</p>
+        <a href="/melhores-produtos" class="btn-primary mt-6 inline-flex">Ver todos os produtos</a>
+      </div>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((p) => <ProductCard {...p.data} />)}
+      </div>
+    )}
+
+    <p class="text-center text-xs text-gray-400 mt-10">
+      Participantes do Programa de Afiliados da Amazon, Mercado Livre e Shopee. Ao comprar pelos nossos links,
+      recebemos uma comissão sem custo adicional para você.
+    </p>
+  </div>
+</PageLayout>
