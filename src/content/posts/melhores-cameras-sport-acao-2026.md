@@ -2,7 +2,7 @@
 title: 4 Melhores Câmeras de Ação Sport 4K de 2026 — Comparativo Honesto
 excerpt: Testamos e comparamos as melhores câmeras de ação disponíveis em 2026, do custo-benefício acessível ao topo de linha. Descubra qual vale o seu dinheiro.
 category: eletronicos
-image: https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80
+image: https://images.unsplash.com/photo-1600333791066-f3c7e752b44e?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Câmera de ação sport montada em capacete durante aventura ao ar livre
 publishedAt: 2026-05-23
 readingTime: 9

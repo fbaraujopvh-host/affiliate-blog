@@ -2,7 +2,7 @@
 title: 10 Melhores Fones de Ouvido Bluetooth de 2026
 excerpt: Comparamos os principais modelos do mercado em 2026 para você escolher o fone ideal. Com destaque para o melhor custo-benefício disponível hoje.
 category: eletronicos
-image: https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80
+image: https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Fones de ouvido Bluetooth sobre fundo branco
 publishedAt: 2026-05-23
 readingTime: 8

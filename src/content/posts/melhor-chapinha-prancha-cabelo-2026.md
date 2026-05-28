@@ -2,7 +2,7 @@
 title: Melhor Chapinha e Prancha de Cabelo 2026 — Do Custo-Benefício ao Profissional
 excerpt: A chapinha certa faz toda a diferença no resultado. Comparamos os melhores modelos de 2026, de opções acessíveis às profissionais de salão, com avaliações reais.
 category: beleza
-image: https://images.unsplash.com/kfBlCz_Lh8k?w=800&q=80
+image: https://images.unsplash.com/photo-1713180760640-c9ff9eb90b2d?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Prancha chapinha de cabelo profissional sobre balcão
 publishedAt: 2026-05-24
 readingTime: 7

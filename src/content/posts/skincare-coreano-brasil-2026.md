@@ -2,7 +2,7 @@
 title: Skincare Coreano no Brasil — Os Produtos K-Beauty Mais Vendidos em 2026
 excerpt: O K-Beauty conquistou o Brasil em 2026 com +200% de crescimento nas buscas. Descubra os produtos coreanos de skincare mais amados pelas brasileiras e como montar sua rotina.
 category: beleza
-image: https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80
+image: https://images.unsplash.com/photo-1741896135490-4062a3b21abf?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Produtos de skincare coreano K-beauty organizados sobre fundo rosa
 publishedAt: 2026-05-24
 readingTime: 8

@@ -2,7 +2,7 @@
 title: Melhores Bases de Maquiagem 2026 — Para Pele Oleosa, Seca e Mista
 excerpt: Escolher a base certa para o seu tipo de pele faz toda a diferença. Comparamos as melhores bases de 2026 para cada perfil, do custo-benefício ao premium.
 category: beleza
-image: https://images.unsplash.com/photo-1586495777744-4e6232bf5c25?w=800&q=80
+image: https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Bases de maquiagem e produtos cosméticos femininos
 publishedAt: 2026-05-24
 readingTime: 7

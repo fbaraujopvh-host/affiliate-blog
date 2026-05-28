@@ -2,7 +2,7 @@
 title: Melhores Séruns com Vitamina C de 2026 — Clareamento, Antioxidante e Anti-idade
 excerpt: A vitamina C é o ativo mais prescrito por dermatologistas para manchas e envelhecimento. Veja os melhores séruns disponíveis no Brasil em 2026, do acessível ao premium.
 category: beleza
-image: https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80
+image: https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Sérum facial com vitamina C em frasco conta-gotas sobre fundo clean
 publishedAt: 2026-05-24
 readingTime: 7

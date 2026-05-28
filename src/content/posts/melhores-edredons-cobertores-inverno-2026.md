@@ -2,7 +2,7 @@
 title: Melhores Edredons e Cobertores para o Inverno 2026 — Guia Completo
 excerpt: Chegou a hora de trocar a roupa de cama! Veja os edredons e cobertores mais bem avaliados de 2026, por tamanho, material e faixa de preço.
 category: casa
-image: https://images.unsplash.com/9QhyuOeu3Ik?w=800&q=80
+image: https://images.unsplash.com/photo-1623944431758-e856760d7b65?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Cama arrumada com edredom macio e aconchegante para o inverno
 publishedAt: 2026-05-24
 readingTime: 6

@@ -2,7 +2,7 @@
 title: Melhores Séruns com Ácido Hialurônico 2026 — Hidratação Profunda para Todos os Tipos de Pele
 excerpt: O ácido hialurônico hidrata, preenche e rejuvenesce sem irritar. Veja os melhores séruns disponíveis no Brasil em 2026, do mais acessível ao premium.
 category: beleza
-image: https://images.unsplash.com/photo-1617897903246-719242758050?w=800&q=80
+image: https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Sérum facial com ácido hialurônico em frasco conta-gotas
 publishedAt: 2026-05-24
 readingTime: 6

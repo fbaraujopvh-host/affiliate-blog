@@ -2,7 +2,7 @@
 title: Melhores Perfumes Femininos Nacionais Até R$150 em 2026
 excerpt: O Brasil é o 2º maior mercado de fragrâncias do mundo. Veja os perfumes femininos nacionais mais amados em 2026, com boa fixação e preço acessível.
 category: beleza
-image: https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80
+image: https://images.unsplash.com/photo-1458538977777-0549b2370168?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Frascos de perfumes femininos elegantes sobre fundo claro
 publishedAt: 2026-05-24
 readingTime: 6

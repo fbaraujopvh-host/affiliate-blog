@@ -2,7 +2,7 @@
 title: Melhores Protetores Solares Faciais de 2026 — Os Mais Indicados por Dermatologistas
 excerpt: O protetor solar facial virou rotina obrigatória em 2026. Veja quais são os mais indicados por dermatologistas, com melhor textura, FPS e custo-benefício.
 category: beleza
-image: https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80
+image: https://images.unsplash.com/photo-1623676714504-edd78728155e?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Produtos de skincare com protetor solar feminino
 publishedAt: 2026-05-24
 readingTime: 7

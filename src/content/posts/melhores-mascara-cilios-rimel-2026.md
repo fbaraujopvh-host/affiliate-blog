@@ -2,7 +2,7 @@
 title: Melhores Rímel e Máscara de Cílios de 2026 — Volume, Alongamento e Duração
 excerpt: A máscara de cílios é o produto de maquiagem mais vendido no Brasil. Testamos os melhores modelos de 2026 para você escolher sem erro.
 category: beleza
-image: https://images.unsplash.com/photo-1583241800698-e8ab01830a66?w=800&q=80
+image: https://images.unsplash.com/photo-1548902378-2ec44c906391?auto=format&fit=crop&w=800&q=80&ixlib=rb-4.1.0
 imageAlt: Máscara de cílios e produtos de maquiagem feminina
 publishedAt: 2026-05-24
 readingTime: 6
