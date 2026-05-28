@@ -6,17 +6,38 @@ interface Props {
   description?: string;
   image?: string;
   type?: 'website' | 'article';
+  publishedAt?: Date;
+  schema?: object;
 }
 
 const {
   title,
   description = 'Indicações honestas dos melhores produtos para você comprar com confiança.',
-  image = '/og-default.jpg',
+  image = '/logo.svg',
   type = 'website',
+  publishedAt,
+  schema,
 } = Astro.props;
 
-const siteUrl = import.meta.env.SITE ?? 'https://euteindico.com';
+const siteUrl = 'https://euteindico.com';
 const canonical = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = image.startsWith('http') ? image : new URL(image, siteUrl).href;
+
+// Schema padrão do site (WebSite)
+const defaultSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Eu Te Indico',
+  url: siteUrl,
+  description: 'Indicações honestas dos melhores produtos para você comprar com confiança.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteUrl}/blog?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const jsonLd = schema ?? defaultSchema;
 ---
 
 <!doctype html>
@@ -30,19 +51,31 @@ const canonical = new URL(Astro.url.pathname, siteUrl).href;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
 
+    <!-- Indexação -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
     <!-- Open Graph -->
+    <meta property="og:site_name" content="Eu Te Indico" />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, siteUrl).href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_BR" />
+    {publishedAt && <meta property="article:published_time" content={publishedAt.toISOString()} />}
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@euteindico" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, siteUrl).href} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

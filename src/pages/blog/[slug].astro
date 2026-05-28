@@ -15,6 +15,9 @@ const { Content } = await render(post);
 
 const { title, excerpt, category, image, imageAlt, publishedAt, readingTime } = post.data;
 
+const siteUrl = 'https://euteindico.com';
+const postUrl = `${siteUrl}/blog/${post.id}`;
+
 const dateStr = publishedAt.toLocaleDateString('pt-BR', {
   day: '2-digit',
   month: 'long',
@@ -29,13 +32,56 @@ const categoryLabels: Record<string, string> = {
   beleza: 'Beleza',
   livros: 'Livros',
 };
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      '@id': `${postUrl}#article`,
+      headline: title,
+      description: excerpt,
+      image: image.startsWith('http') ? image : `${siteUrl}${image}`,
+      datePublished: publishedAt.toISOString(),
+      dateModified: publishedAt.toISOString(),
+      author: {
+        '@type': 'Organization',
+        name: 'Eu Te Indico',
+        url: siteUrl,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Eu Te Indico',
+        url: siteUrl,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.svg`,
+        },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+      articleSection: categoryLabels[category] ?? category,
+      inLanguage: 'pt-BR',
+      timeRequired: `PT${readingTime}M`,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: siteUrl },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+        { '@type': 'ListItem', position: 3, name: title, item: postUrl },
+      ],
+    },
+  ],
+};
 ---
 
 <PageLayout
-  title={`${title} — euteindico.com`}
+  title={`${title} — Eu Te Indico`}
   description={excerpt}
   image={image}
   type="article"
+  publishedAt={publishedAt}
+  schema={articleSchema}
 >
   <article class="max-w-4xl mx-auto px-4 py-12">
     <!-- Breadcrumb -->
@@ -81,7 +127,7 @@ const categoryLabels: Record<string, string> = {
 
     <!-- Affiliate disclosure -->
     <div class="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-500">
-      <strong>Divulgação:</strong> Este artigo pode conter links de afiliado para a Amazon.
+      <strong>Divulgação:</strong> Este artigo pode conter links de afiliado da Amazon, Mercado Livre e Shopee.
       Se você comprar através deles, recebemos uma pequena comissão sem custo adicional para você.
     </div>
   </article>
