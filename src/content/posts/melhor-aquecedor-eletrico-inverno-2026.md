@@ -2,7 +2,7 @@
 title: Melhor Aquecedor Elétrico para o Inverno 2026 — Qual Comprar?
 excerpt: Com o inverno chegando e buscas por aquecedores disparando 220%, separamos os modelos mais bem avaliados do mercado para você escolher com segurança.
 category: casa
-image: https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80
+image: https://images.unsplash.com/39mlECY8VkU?w=800&q=80
 imageAlt: Aquecedor elétrico ligado em sala de estar no inverno
 publishedAt: 2026-05-24
 readingTime: 7

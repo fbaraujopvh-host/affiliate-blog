@@ -2,7 +2,7 @@
 title: Melhores Creatinas de 2026 — As 10 Mais Vendidas e Testadas no Brasil
 excerpt: A creatina virou febre no Brasil em 2026, saiu do nicho da musculação e médicos já recomendam para todas as idades. Veja quais são as melhores e mais puras do mercado.
 category: esportes
-image: https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80
+image: https://images.unsplash.com/MUlIfSNODXE?w=800&q=80
 imageAlt: Suplemento de creatina em pó sobre superfície esportiva
 publishedAt: 2026-05-24
 readingTime: 8
